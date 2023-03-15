@@ -21,11 +21,11 @@ jobs:
       with:
         dotnet-version: 4.6.x
     - name: Restore dependencies
-      working-directory: ./AsyncRAT-C#/Client
+      working-directory: ./AsyncRAT-C#/Server
       run: dotnet restore
     - name: Build
-      working-directory: ./AsyncRAT-C#/Client
+      working-directory: ./AsyncRAT-C#/Server
       run: dotnet build --no-restore
     - name: Test
-      working-directory: ./AsyncRAT-C#/Client
+      working-directory: ./AsyncRAT-C#/Server
       run: dotnet test --no-build --verbosity normal
